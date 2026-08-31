@@ -2,14 +2,13 @@
 
 # Creative Print RevOps Lab
 
-### CRM Operations · HubSpot · Revenue Analytics · Systems Integration
+### CRM Operations · HubSpot · Data Quality · Automation · Reporting
 
-Três projetos práticos desenvolvidos durante um bootcamp intensivo de 8 semanas.
+Implementação end-to-end de CRM para uma empresa brasileira B2B SaaS simulada, desenvolvida em um bootcamp prático de 8 semanas.
 
-![HubSpot](https://img.shields.io/badge/HubSpot-CRM%20%26%20RevOps-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Revenue%20Analytics-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Make](https://img.shields.io/badge/Make-Integrations-6D00CC?style=for-the-badge)
-![Status](https://img.shields.io/badge/status-bootcamp%20planejado-64748B?style=for-the-badge)
+![HubSpot](https://img.shields.io/badge/HubSpot-CRM%20Operations-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-Operations%20Analytics-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Status](https://img.shields.io/badge/status-em%20andamento-2563EB?style=for-the-badge)
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Karla%20Teshima-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karla-teshima-revops)
 
@@ -17,82 +16,98 @@ Três projetos práticos desenvolvidos durante um bootcamp intensivo de 8 semana
 
 ---
 
-## Sobre o bootcamp
+## Sobre o projeto
 
-Neste repositório, vou desenvolver três projetos conectados para demonstrar competências práticas em CRM Operations, HubSpot e Revenue Operations.
+Este repositório documenta um único case principal:
 
-Os cases serão construídos do zero durante o bootcamp. Cada documento, configuração, consulta, teste e evidência será publicado somente depois de ser produzido e validado.
+**HubSpot CRM Implementation — B2B SaaS Simulation**
 
-Minha execução seguirá este ciclo:
+O case utiliza dados sintéticos, explicitamente identificados como simulação. Nenhum cliente, volume ou resultado será apresentado como real.
+
+A execução segue:
 
 ```text
-Problema → Diagnóstico → Implementação → Testes → Análise → Evidência
+Problema → Diagnóstico → Metodologia → Decisão → Implementação → Evidência → Resultado → Competência
 ```
 
-> Não apresento planejamento como experiência concluída. O status dos projetos será atualizado conforme as entregas forem realizadas.
+> Planejamento não será apresentado como implementação. Os artefatos serão publicados somente depois de produzidos e validados.
 
-## Projetos
+## Estado atual
 
-| Case | O que vou desenvolver | Evidência final | Status |
+- **Período:** 24 de agosto a 17 de outubro de 2026
+- **Semana 1:** HubSpot Reporting Certification — concluída
+- **Semana atual:** Semana 2 — Discovery, requisitos e arquitetura
+- **Projeto atual:** Projeto 1 — CRM Architecture & Data Migration
+- **Status geral:** em andamento
+
+## Projetos conectados
+
+| Projeto | Período | Escopo | Status |
 |---|---|---|---|
-| **[01 — CRM Implementation & Data Quality](./01-crm-implementation-data-quality/)** | Auditoria, limpeza, field mapping, importação e validação no HubSpot | Base corrigida, associações verificadas e log de erros e correções | ⚪ Planejado |
-| **[02 — Revenue Funnel Analysis](./02-revenue-funnel-analysis/)** | Dataset, qualidade de dados, SQL, métricas e dashboard | Dashboard de funil, aging e conversão, consultas interpretadas e relatório analítico | ⚪ Planejado |
-| **[03 — HubSpot Revenue Operations System](./03-hubspot-revenue-operations-system/)** | Pipeline, SLA, workflows, integrações, testes e reporting | Pipeline testado, workflow monitorado e automação integrada com logs e payloads | ⚪ Planejado |
+| **[01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/)** | Semanas 2–4 | Discovery, requisitos, arquitetura, governança, qualidade, migração e reconciliação | 🔵 Em andamento |
+| **[02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/)** | Semanas 5–6 | Lifecycle, pipeline, SLA, ownership, workflows, handoffs e onboarding | ⚪ Planejado |
+| **[03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/)** | Semana 7 | KPIs, SQL de funil, dashboards, qualidade, integração e análise executiva | ⚪ Planejado |
 
-## O que será entregue
+A Semana 8 consolida QA, documentação, demonstração, portfólio e preparação para candidaturas. Ela não cria um quarto projeto.
 
-### Case 01 — CRM Implementation & Data Quality
+## Empresa e dados simulados
 
-Vou auditar uma base, identificar problemas de qualidade, executar correções, mapear campos e associações, importar os dados no HubSpot e validar o resultado. O case será encerrado com rastreabilidade entre problema, correção e evidência.
+O laboratório representa uma empresa brasileira B2B SaaS com Marketing, SDRs, executivos de vendas, Customer Success e suporte; aquisição inbound e outbound; assinatura, onboarding, expansão, renovação e churn.
 
-### Case 02 — Revenue Funnel Analysis
+Base sintética prevista:
 
-Vou estruturar e validar um dataset, escrever consultas SQL orientadas a perguntas de negócio, definir métricas e construir uma análise de funil. O resultado será apresentado em um dashboard executivo e em um relatório com achados e recomendações.
+- 500 contatos;
+- 150 empresas;
+- 220 negócios;
+- 180 tickets;
+- 12 meses de histórico;
+- 6 usuários internos.
 
-### Case 03 — HubSpot Revenue Operations System
+## Progressão técnica
 
-Vou construir um sistema operacional de receita no HubSpot, com pipeline, regras de progressão, SLA, workflow, integração e reporting. O sistema será submetido a cenários de teste, incluindo exceções e falhas.
+### SQL
 
-Na etapa final, os três cases serão consolidados em um case bilíngue em português e inglês. O capstone fechará os projetos existentes e não criará uma quarta pasta.
+- Semana 3: consultas básicas;
+- Semana 4: qualidade, duplicidades e reconciliação;
+- Semana 5: pipeline, responsáveis e atividades;
+- Semana 7: funil, conversão e aging.
+
+### Reporting
+
+- Semana 2: perguntas de negócio;
+- Semana 3: propriedades reportáveis;
+- Semana 4: qualidade dos dados;
+- Semana 5: métricas do pipeline;
+- Semana 6: monitoramento de workflows e SLAs;
+- Semana 7: dashboards consolidados.
+
+### Integração
+
+Será implementada somente uma integração, com caso de uso, origem e destino, mapeamento, regra de criação ou atualização, testes de sucesso e falha, log de exceções e reconciliação.
 
 ## Tecnologias previstas
 
-| Tecnologia | Uso no bootcamp |
+| Tecnologia | Uso |
 |---|---|
 | **HubSpot CRM** | Objetos, propriedades, associações, importação, pipeline, workflows e reporting |
-| **Excel / Google Sheets** | Auditoria, limpeza, deduplicação, mapping e validação |
-| **SQL** | Análise de funil, aging, conversão e receita |
-| **Looker Studio** | Dashboard executivo |
-| **Make** | Automação e integração entre sistemas |
-| **APIs REST, JSON e webhooks** | Troca de dados, eventos, payloads e tratamento de erros |
+| **Excel / Power Query** | Auditoria, limpeza, transformação, mapping e reconciliação |
+| **SQL** | Qualidade, pipeline, funil, conversão e aging |
+| **Integração externa** | Sincronização controlada e tratamento de exceções |
 | **GitHub** | Versionamento, documentação técnica e evidências |
 
-Todas as tecnologias estão apresentadas como escopo previsto. Elas passarão a compor minhas competências demonstráveis apenas quando os respectivos artefatos e testes forem publicados.
-
-## Evidências esperadas ao final
-
-- auditoria e correção de uma base;
-- importação com associações verificadas;
-- log de erros, decisões e correções;
-- pipeline ativo validado por nove cenários de teste;
-- workflow com SLA e monitoramento;
-- dashboard de funil, aging e conversão;
-- consultas SQL acompanhadas de interpretação de negócio;
-- integração com casos de sucesso e erro, logs e payloads;
-- case final bilíngue em português e inglês;
-- preparação para explicar decisões em entrevista técnica.
+As tecnologias somente serão tratadas como competências demonstráveis quando houver implementação, testes e evidências publicados.
 
 ## Estrutura
 
 ```text
 Creative-Print-RevOps-Lab/
-├── 01-crm-implementation-data-quality/
-├── 02-revenue-funnel-analysis/
-├── 03-hubspot-revenue-operations-system/
+├── 01-crm-architecture-data-migration/
+├── 02-lifecycle-pipeline-automation/
+├── 03-revenue-reporting-operations-analytics/
 └── README.md
 ```
 
-As subpastas e os artefatos de cada projeto serão adicionados quando forem produzidos no bootcamp. Não mantenho arquivos vazios apenas para simular progresso.
+Não haverá pastas diárias nem arquivos vazios para simular progresso.
 
 ---
 
