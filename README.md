@@ -1,8 +1,10 @@
 <div align="center">
 
-# NexaFlow | CRM do dado à decisão
+# NexaFlow_CRM_Implementation
 
-### Case de CRM Operations & HubSpot • B2B SaaS fictício • Portfólio independente
+### NexaFlow | CRM do dado à decisão
+
+Case de CRM Operations & HubSpot • B2B SaaS fictício • Portfólio independente
 
 [LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops) · [Apresentação completa (PDF)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
 
@@ -40,6 +42,8 @@ A mesma coorte de **5 Deals sintéticos** fundamenta SQL, planilha de resultados
 
 O campo vazio não prova ausência de tarefa. `Amount` do Deal não prova pagamento nem receita reconhecida. QRY-005/006 não foram executadas porque faltam os exports necessários.
 
+Os **15 Deals elegíveis** do pacote de migração do Projeto 1 pertencem ao universo preparado para aquele piloto. Eles não são a população analítica do Projeto 3, cuja coorte verificada tem **5 Deals**.
+
 ### Dashboards HubSpot
 
 **Executivo** — distribuição dos 5 Deals por estágio.
@@ -60,6 +64,14 @@ O campo vazio não prova ausência de tarefa. `Amount` do Deal não prova pagame
 - HubSpot reporting, análise operacional e comunicação executiva;
 - QA, registro de limites e documentação orientada a evidências.
 
+## Aprendizados do case
+
+- **Preparação não é migração integral:** o Projeto 1 separa universo elegível, exceções e piloto realmente executado.
+- **Configuração precisa de validação:** no Projeto 2, persistência do owner e comportamento de workflows foram conferidos em testes; etapas manuais e desvios ficaram registrados.
+- **Campo vazio não prova ausência de atividade:** `Next Activity Date` precisa ser interpretado junto à timeline e ao contexto operacional.
+- **Valor do Deal não é receita reconhecida:** `Amount` sozinho não comprova pagamento ou reconhecimento contábil.
+- **Métrica depende de uma população definida:** a coorte de 5 do Projeto 3 foi reconciliada entre CSV, SQLite, SQL e dashboards.
+
 ## Limites de interpretação
 
 - NexaFlow e registros CRM são fictícios; os dados analíticos são fixtures sintéticas.
@@ -69,6 +81,17 @@ O campo vazio não prova ausência de tarefa. `Amount` do Deal não prova pagame
 - Deal Amount não comprova pagamento nem receita reconhecida.
 - Capturas e relatórios demonstram um ambiente de treinamento; não representam resultados de uma empresa real.
 - Não há vídeo no portfólio; a apresentação usa documentos e capturas de tela.
+
+## Estrutura do repositório
+
+```text
+NexaFlow_CRM_Implementation/
+├── 01-crm-architecture-data-migration/
+├── 02-lifecycle-pipeline-automation/
+├── 03-revenue-reporting-operations-analytics/
+├── assets/
+└── README.md
+```
 
 ## Navegação
 
