@@ -1,70 +1,82 @@
-<div align="center">
-
 # NexaFlow | CRM do dado à decisão
 
 ### Uma jornada de organização comercial, operação e visibilidade do funil
 
-[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops) · [Ver apresentação do projeto (PDF)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
-
-![Case concluído](https://img.shields.io/badge/case-3%20etapas%20conclu%C3%ADdas-0F766E?style=for-the-badge)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karla%20Teshima-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karla-teshima-revops)
+[![Apresentação](https://img.shields.io/badge/Apresentação-PDF-FF7A59?style=for-the-badge)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
+![Case concluído](https://img.shields.io/badge/Case-3%20etapas%20concluídas-0F766E?style=for-the-badge)
 ![CRM](https://img.shields.io/badge/CRM-HubSpot-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
 
-</div>
-
-![Jornada NexaFlow: organizar dados, estruturar a operação comercial e dar visibilidade ao funil](./assets/nexaflow-journey.svg)
-
-## O projeto
-
-A NexaFlow é uma empresa B2B SaaS fictícia. O projeto parte de um cenário em que as informações comerciais estavam espalhadas, as regras de passagem entre equipes não eram consistentes e a liderança tinha pouca clareza sobre o andamento dos negócios.
-
-A proposta foi organizar o caminho inteiro: entender e preparar os dados, estabelecer uma operação comercial rastreável e apresentar resultados que pudessem ser conferidos entre si.
-
-## Minha contribuição
-
-Sou Karla Teshima e conduzi o desenvolvimento deste case, participando do diagnóstico e da preparação dos dados, da definição dos processos comerciais, da validação dos cenários e da organização das evidências para apresentação.
-
-O trabalho foi desenvolvido com apoio de IA na análise, implementação técnica, documentação e QA. As contribuições abaixo descrevem minha participação no case; não pressupõem execução individual de todas as tarefas.
-
-## O que foi realizado
-
-| Etapa | Trabalho | Resultado |
-|---|---|---|
-| [01 — Arquitetura e migração de CRM](./01-crm-architecture-data-migration/) | Levantamento de fontes, regras e necessidades; preparação dos dados e teste de importação no HubSpot | 14 fontes avaliadas; 341 registros consolidados, com 177 elegíveis e 164 em exceções ou pendências. Um piloto criou 9 registros no HubSpot, incluindo 2 Contacts. A migração integral não foi executada. |
-| [02 — Operação comercial e automações](./02-lifecycle-pipeline-automation/) | Organização das etapas de qualificação e vendas, responsabilidades, prazos, alertas e passagem para onboarding | Regras operacionais e automações foram testadas. Os passos manuais e os desvios encontrados foram registrados para que o processo não prometa comportamentos que não foram comprovados. |
-| [03 — Relatórios e análise de receita](./03-revenue-reporting-operations-analytics/) | Construção de uma visão operacional e executiva para acompanhar negócios | Os painéis e a análise usaram a mesma amostra de **5 negócios**: 1 em Appointment Scheduled, 1 em Qualified To Buy, 1 Closed Won e 2 Closed Lost. Dois negócios abertos não tinham uma data de próxima atividade registrada; nenhum estava sem responsável. |
-
-## Evidências dos painéis
-
-**Visão executiva** — distribuição dos cinco negócios por etapa.
-
-![Painel executivo NexaFlow](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
-
-**Acompanhamento operacional** — negócios abertos sem data de próxima atividade registrada.
-
-![Painel operacional NexaFlow](./03-revenue-reporting-operations-analytics/evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
-
-## O que o projeto trouxe
-
-- Um caminho documentado entre diagnóstico, preparação de dados, operação comercial e acompanhamento do funil.
-- Uma separação clara entre registros preparados, exceções e o piloto realmente executado.
-- Regras comerciais testadas com os limites encontrados descritos junto dos resultados.
-- Painéis alinhados a uma população definida, evitando comparar contagens de escopos diferentes.
-- Uma leitura cuidadosa dos dados: campo sem preenchimento não prova ausência de atividade, e valor de negócio não comprova pagamento nem receita reconhecida.
-
-## O que este case demonstra
-
-Organização e qualidade de dados · desenho de processos comerciais · configuração e teste de regras no CRM · acompanhamento do funil · validação de resultados · comunicação clara de escopo e limitações.
-
-## Conheça cada etapa
-
-Os READMEs dos [Projetos 1](./01-crm-architecture-data-migration/), [2](./02-lifecycle-pipeline-automation/) e [3](./03-revenue-reporting-operations-analytics/) apresentam as decisões e evidências de cada parte do trabalho.
-
-> **Sobre os dados:** a NexaFlow e os registros usados são fictícios e sintéticos. Os números demonstram o trabalho realizado neste case; não representam resultados de uma empresa real. O campo de valor dos negócios não foi tratado como prova de receita.
+![Jornada NexaFlow](./assets/nexaflow-journey.svg)
 
 ---
 
-<div align="center">
+## O desafio
 
-**Karla Teshima** · [LinkedIn](https://www.linkedin.com/in/karla-teshima-revops)
+A **NexaFlow** é uma empresa B2B SaaS fictícia com um problema clássico de operação comercial:
 
-</div>
+- Informações espalhadas em múltiplas fontes
+- Regras de passagem entre equipes inconsistentes
+- Baixa visibilidade do funil para a liderança
+
+O objetivo do case foi estruturar o caminho completo: **do diagnóstico dos dados até a tomada de decisão baseada em evidências**.
+
+---
+
+## O que foi entregue
+
+| Etapa | Escopo | Principais resultados |
+|-------|--------|----------------------|
+| **[01 — Arquitetura e migração de CRM](./01-crm-architecture-data-migration/)** | Levantamento de fontes, regras de elegibilidade, preparação de dados e piloto de importação no HubSpot | 14 fontes avaliadas · 341 registros consolidados · 177 elegíveis · 164 em exceção · Piloto com 9 registros criados no HubSpot |
+| **[02 — Operação comercial e automações](./02-lifecycle-pipeline-automation/)** | Desenho de lifecycle, pipeline, ownership, SLAs, alertas e handoff para onboarding | 8 transições mapeadas · Workflows testados · Desvios e procedimentos manuais documentados |
+| **[03 — Relatórios e análise de receita](./03-revenue-reporting-operations-analytics/)** | Visão operacional + executiva, consultas SQL e reconciliação de dados | Análise e dashboards alinhados a uma amostra controlada de 5 negócios · Reconciliação completa entre fonte, SQL e HubSpot |
+
+---
+
+## Evidências dos painéis
+
+**Visão executiva** — distribuição dos 5 negócios por estágio
+
+![Painel executivo](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
+
+**Acompanhamento operacional** — negócios abertos sem data de próxima atividade
+
+![Painel operacional](./03-revenue-reporting-operations-analytics/evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
+
+---
+
+## Principais aprendizados e diferenciais
+
+- Separação clara entre **dados preparados**, **exceções** e **o que foi realmente executado**
+- Processos comerciais testados com documentação honesta de limites e comportamentos reais
+- Painéis construídos sobre uma **população definida e reconciliada** (evitando comparações inválidas)
+- Leitura criteriosa de dados: campo vazio ≠ ausência de atividade · valor do negócio ≠ receita reconhecida
+- Comunicação transparente de escopo e limitações
+
+---
+
+## Competências demonstradas
+
+`Data Quality` · `CRM Architecture` · `HubSpot` · `Sales Operations` · `Revenue Operations` · `Process Design` · `Workflow Automation` · `SQL` · `Reporting` · `Data Reconciliation` · `Stakeholder Communication`
+
+---
+
+## Estrutura do repositório
+
+```text
+├── 01-crm-architecture-data-migration/        → Diagnóstico, mapeamento e piloto de migração
+├── 02-lifecycle-pipeline-automation/         → Regras operacionais, ownership e automações
+├── 03-revenue-reporting-operations-analytics/ → Análise de funil, SQL e dashboards
+└── assets/                                  → Apresentação e materiais visuais
+```
+
+Cada pasta contém seu próprio README com decisões, evidências e limitações detalhadas.
+
+## Sobre os dados
+
+A NexaFlow e todos os registros utilizados são fictícios e sintéticos. Os números servem exclusivamente para demonstrar o trabalho realizado neste case e não representam resultados de uma empresa real. O campo de valor dos negócios não foi tratado como prova de receita.
+
+---
+
+**Karla Teshima**  
+[LinkedIn](https://www.linkedin.com/in/karla-teshima-revops) · Revenue Operations
