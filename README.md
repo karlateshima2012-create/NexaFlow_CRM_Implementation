@@ -72,11 +72,12 @@ O objetivo do case foi estruturar o caminho completo: **do diagnóstico dos dado
 
 Cada pasta contém seu próprio README com decisões, evidências e limitações detalhadas.
 
-## Sobre os dados
-
-A NexaFlow e todos os registros utilizados são fictícios e sintéticos. Os números servem exclusivamente para demonstrar o trabalho realizado neste case e não representam resultados de uma empresa real. O campo de valor dos negócios não foi tratado como prova de receita.
+> **Sobre os dados**
+>
+> A NexaFlow e todos os registros utilizados são fictícios e sintéticos. Os números servem exclusivamente para demonstrar o trabalho realizado neste case e não representam resultados de uma empresa real. O campo de valor dos negócios não foi tratado como prova de receita.
 
 ---
 
-**Karla Teshima**  
-[LinkedIn](https://www.linkedin.com/in/karla-teshima-revops) · Revenue Operations
+**Karla Teshima** · Revenue Operations
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karla%20Teshima-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karla-teshima-revops)
