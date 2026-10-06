@@ -1,120 +1,40 @@
-<div align="center">
+# HubSpot CRM Implementation — B2B SaaS Simulation
 
-# Creative Print RevOps Lab
+**Portfólio técnico de CRM Operations e Revenue Operations** desenvolvido por Karla Teshima como um case independente de treinamento. Uma empresa B2B SaaS simulada, três projetos conectados e evidências reais de execução em ambiente de treinamento.
 
-### CRM Operations · HubSpot · Data Quality · Automation · Reporting
+[LinkedIn](https://www.linkedin.com/in/karla-teshima-revops) · [Repositório](https://github.com/karlateshima2012-create/Creative-Print-RevOps-Lab)
 
-Implementação end-to-end de CRM para uma empresa brasileira B2B SaaS simulada, desenvolvida em um bootcamp prático de 8 semanas.
+## Resumo do case
 
-![HubSpot](https://img.shields.io/badge/HubSpot-CRM%20Operations-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Operations%20Analytics-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Status](https://img.shields.io/badge/status-em%20andamento-2563EB?style=for-the-badge)
+A NexaFlow representa uma empresa brasileira B2B SaaS com dados dispersos, critérios operacionais pouco consistentes e baixa visibilidade de funil. O trabalho constrói uma sequência rastreável no HubSpot: arquitetura e migração, operação comercial e automação, reporting e analytics.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karla%20Teshima-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karla-teshima-revops)
+| Etapa | Trabalho demonstrado | Estado e escopo |
+|---|---|---|
+| [01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/) | Discovery, auditoria de 14 fontes, modelo de dados, governança, ETL, Data Quality e piloto de importação | Concluído no escopo de pacote de migração preparado + piloto real representativo; sem migração integral |
+| [02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/) | Lifecycle, qualificação, pipeline, ownership, SLA, workflows, handoffs e testes | Concluído no escopo de treinamento, com desvios e limites documentados |
+| [03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/) | KPIs, SQL de funil, dashboards, QA e lote controlado CSV → SQLite | QA final concluído; análise alinhada a uma coorte explícita de **5 Deals** |
 
-</div>
+## Evidências em destaque
 
----
+- **Projeto 1:** 341 registros consolidados, 177 elegíveis e 164 em exceções/pendências rastreáveis; piloto de 9 registros HubSpot, incluindo 2 Contacts criados no cenário da nota. O piloto não equivale a 9 linhas de origem nem a carga integral.
+- **Projeto 2:** matriz de rastreabilidade, testes operacionais e workflows testados no portal de treinamento; pagamento simulado e handoff de onboarding manual.
+- **Projeto 3:** 5 Deals no CSV, SQLite, SQL, resultados e dashboards; distribuição de estágios: Appointment Scheduled 1, Qualified To Buy 1, Closed Won 1, Closed Lost 2.
 
-## Sobre o projeto
+Os detalhes e evidências estão nos READMEs de cada projeto. Para o Projeto 3, veja também a [consulta SQL](./03-revenue-reporting-operations-analytics/sql/03_NexaFlow_Funnel_SQL_v1.0.sql), o [relatório final](./03-revenue-reporting-operations-analytics/evidence/08_NexaFlow_Revenue_Reporting_Analytics_Report_v1.0.docx) e as [capturas dos dashboards](./03-revenue-reporting-operations-analytics/evidence/).
 
-Este repositório documenta um único case principal:
+## Limites de interpretação
 
-**HubSpot CRM Implementation — B2B SaaS Simulation**
+- NexaFlow e os dados de CRM são simulados; os dados analíticos são **fixtures sintéticas**.
+- O Projeto 1 descreve universo de migração preparado e piloto. Seu número de Deals elegíveis pertence a esse escopo de migração e **não** é a população analítica do Projeto 3.
+- A população analítica do Projeto 3 é exatamente **5 Deals**; Amount de Deal não comprova pagamento nem receita reconhecida.
+- A integração da Aula 37 foi um lote controlado **CSV → SQLite**, sem API, sincronização contínua ou escrita de volta no HubSpot.
+- Cenários financeiros/handoffs do Projeto 2 são simulados e manuais quando indicado; não representam transações ou automações de produção.
+- Não há vídeo. A apresentação usa documentos e capturas reais selecionadas.
 
-O case utiliza dados sintéticos, explicitamente identificados como simulação. Nenhum cliente, volume ou resultado será apresentado como real.
+## Competências demonstradas
 
-A execução segue:
+CRM data architecture · HubSpot configuration and reporting · data quality and migration planning · lifecycle and pipeline operations · workflow testing · SQL funnel analysis · controlled CSV-to-SQLite reconciliation · operational documentation and QA.
 
-```text
-Problema → Diagnóstico → Metodologia → Decisão → Implementação → Evidência → Resultado → Competência
-```
+## English summary
 
-> Planejamento não será apresentado como implementação. Os artefatos serão publicados somente depois de produzidos e validados.
-
-## Estado atual
-
-- **Período:** 24 de agosto a 17 de outubro de 2026
-- **Semana 1:** HubSpot Reporting Certification — concluída
-- **Semana atual:** Semana 2 — Discovery, requisitos e arquitetura
-- **Projeto atual:** Projeto 1 — CRM Architecture & Data Migration
-- **Status geral:** em andamento
-
-## Projetos conectados
-
-| Projeto | Período | Escopo | Status |
-|---|---|---|---|
-| **[01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/)** | Semanas 2–4 | Discovery, requisitos, arquitetura, governança, qualidade, migração e reconciliação | 🔵 Em andamento |
-| **[02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/)** | Semanas 5–6 | Lifecycle, pipeline, SLA, ownership, workflows, handoffs e onboarding | ⚪ Planejado |
-| **[03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/)** | Semana 7 | KPIs, SQL de funil, dashboards, qualidade, integração e análise executiva | ⚪ Planejado |
-
-A Semana 8 consolida QA, documentação, demonstração, portfólio e preparação para candidaturas. Ela não cria um quarto projeto.
-
-## Empresa e dados simulados
-
-O laboratório representa uma empresa brasileira B2B SaaS com Marketing, SDRs, executivos de vendas, Customer Success e suporte; aquisição inbound e outbound; assinatura, onboarding, expansão, renovação e churn.
-
-Base sintética prevista:
-
-- 500 contatos;
-- 150 empresas;
-- 220 negócios;
-- 180 tickets;
-- 12 meses de histórico;
-- 6 usuários internos.
-
-## Progressão técnica
-
-### SQL
-
-- Semana 3: consultas básicas;
-- Semana 4: qualidade, duplicidades e reconciliação;
-- Semana 5: pipeline, responsáveis e atividades;
-- Semana 7: funil, conversão e aging.
-
-### Reporting
-
-- Semana 2: perguntas de negócio;
-- Semana 3: propriedades reportáveis;
-- Semana 4: qualidade dos dados;
-- Semana 5: métricas do pipeline;
-- Semana 6: monitoramento de workflows e SLAs;
-- Semana 7: dashboards consolidados.
-
-### Integração
-
-Será implementada somente uma integração, com caso de uso, origem e destino, mapeamento, regra de criação ou atualização, testes de sucesso e falha, log de exceções e reconciliação.
-
-## Tecnologias previstas
-
-| Tecnologia | Uso |
-|---|---|
-| **HubSpot CRM** | Objetos, propriedades, associações, importação, pipeline, workflows e reporting |
-| **Excel / Power Query** | Auditoria, limpeza, transformação, mapping e reconciliação |
-| **SQL** | Qualidade, pipeline, funil, conversão e aging |
-| **Integração externa** | Sincronização controlada e tratamento de exceções |
-| **GitHub** | Versionamento, documentação técnica e evidências |
-
-As tecnologias somente serão tratadas como competências demonstráveis quando houver implementação, testes e evidências publicados.
-
-## Estrutura
-
-```text
-Creative-Print-RevOps-Lab/
-├── 01-crm-architecture-data-migration/
-├── 02-lifecycle-pipeline-automation/
-├── 03-revenue-reporting-operations-analytics/
-└── README.md
-```
-
-Não haverá pastas diárias nem arquivos vazios para simular progresso.
-
----
-
-<div align="center">
-
-**Karla Teshima**  
-Founder & CEO, Creative Print  
-[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops)
-
-</div>
+An independent portfolio case documenting a HubSpot CRM implementation for a simulated Brazilian B2B SaaS company. Three connected projects cover CRM architecture and a representative migration pilot, lifecycle and pipeline operations with tested workflows, and revenue reporting analytics. The Project 3 analytical cohort contains exactly five synthetic Deals. Its integration was a controlled manual CSV-to-SQLite batch, with no API or continuous sync. Deal Amount is not proof of payment or recognized revenue.

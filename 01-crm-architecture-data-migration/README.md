@@ -1,74 +1,31 @@
-<div align="center">
-
 # Projeto 1 — CRM Architecture & Data Migration
 
-### Discovery, requisitos, arquitetura, governança, qualidade e migração
+**Status:** concluído em 21/09/2026 no escopo aprovado de pacote Import Ready + piloto real representativo. **Não houve migração integral.**
 
-![HubSpot](https://img.shields.io/badge/HubSpot-CRM-FF7A59?style=flat-square&logo=hubspot&logoColor=white)
-![Data Quality](https://img.shields.io/badge/Data-Quality-0F766E?style=flat-square)
-![Status](https://img.shields.io/badge/status-em%20andamento-2563EB?style=flat-square)
+Primeira etapa do case **HubSpot CRM Implementation — B2B SaaS Simulation**. Os dados e a empresa são fictícios; o piloto foi executado em portal HubSpot Developer de treinamento.
 
-</div>
+## Problema e decisão
 
-## Contexto
+Quatorze fontes legadas continham duplicidades, formatos e regras inconsistentes, associações frágeis e pouca rastreabilidade. O trabalho definiu uma arquitetura e um mapping por objeto/campo antes da transformação, preservou exceções e usou um piloto pequeno para testar o fluxo disponível no portal.
 
-Primeiro projeto do case **HubSpot CRM Implementation — B2B SaaS Simulation**, desenvolvido nas semanas 2 a 4 do bootcamp.
+## Execução e resultado
 
-Os dados serão sintéticos e identificados como simulação. Este projeto está em andamento; somente evidências produzidas e validadas serão publicadas.
+- Inventário e auditoria de 14 fontes; modelo de objetos, relacionamentos, propriedades e governança.
+- Mapping origem → destino, ordem de carga e regras de identidade; ETL rastreável com Power Query e validações SQL.
+- 341 registros consolidados: 177 elegíveis e 164 em exceções/pendências rastreáveis. O pacote de migração do Projeto 1 tem seu próprio universo operacional; ele não é a coorte analítica do Projeto 3, que foi definida separadamente com 5 Deals. No Import Ready do Projeto 1, o objeto Deal contém 15 registros elegíveis; esse número descreve o escopo maior da migração, não a amostra analítica de 5 Deals SIM- do Projeto 3.
+- Piloto no HubSpot: 9 registros criados em oito tipos de dataset, incluindo 2 Contacts no cenário de uma nota; isso não significa 9 linhas únicas de origem.
+- As associações financeiras em lote por API, a carga dos 177 elegíveis e o rollback transacional não foram demonstrados.
 
-## Problema
+## Evidências selecionadas
 
-A empresa simulada opera com planilhas diferentes, dados duplicados, associações incorretas, propriedades inconsistentes e ausência de governança. Isso compromete operação, migração e reporting.
+- [Relatório final de migração](./evidence/15_NexaFlow_Data_Migration_Report_v1.0.docx)
+- [Modelo de dados e governança](./evidence/08_Data_Model_and_Governance_NexaFlow.xlsx)
+- [Mapping de migração](./evidence/12_NexaFlow_Migration_Mapping_v1.0.xlsx)
 
-## Objetivo
+O relatório explica contagens, casos do piloto, associações comprovadas, desvios e limites. Os arquivos completos de origem e os datasets Import Ready não são publicados neste portfólio.
 
-Transformar requisitos de negócio e reporting em uma arquitetura de CRM documentada, preparar e tratar a base sintética, executar a migração e reconciliar os resultados no HubSpot.
+## Competências demonstradas
 
-## Competências desenvolvidas
+Discovery e requisitos · data modeling · CRM data governance · source-to-target mapping · ETL/Power Query · SQL para qualidade · importação piloto · reconciliação e documentação de exceções.
 
-- discovery e requisitos de negócio;
-- requisitos de reporting;
-- processos atual e futuro;
-- objetos, propriedades e associações;
-- governança e dicionário de dados;
-- Excel e Power Query;
-- limpeza, deduplicação e padronização;
-- SQL aplicado à qualidade;
-- importação, reconciliação e tratamento de erros.
-
-## Entregáveis
-
-| Entregável | Evidência esperada | Status |
-|---|---|---|
-| Business brief | Contexto, problema, objetivos, escopo e restrições | A produzir |
-| Processos atual e futuro | Fluxo diagnosticado e processo proposto | A produzir |
-| Matriz de requisitos | Necessidades ligadas a processo, dados e reporting | A produzir |
-| Modelo de dados | Objetos, chaves e associações | A produzir |
-| Dicionário de propriedades | Definições, tipos, regras e ownership | A produzir |
-| Regras de governança | Criação, atualização, qualidade e controle | A produzir |
-| Base original e tratada | Transformações rastreáveis | A produzir |
-| Log de erros | Falhas, decisões, correções e reprocessamentos | A produzir |
-| Arquivos de importação | Cargas controladas por objeto | A produzir |
-| Validação pós-importação | Contagens, associações e reconciliação | A produzir |
-
-## Critério de conclusão
-
-O projeto será concluído somente quando Karla conseguir explicar o problema, justificar a arquitetura, executar a preparação e importação, testar cenários positivos e negativos, corrigir erros, apresentar evidências e repetir a atividade central sem roteiro.
-
-## Estrutura prevista
-
-```text
-01-crm-architecture-data-migration/
-├── discovery-and-requirements/
-├── process-and-data-model/
-├── governance/
-├── source-and-clean-data/
-├── import/
-├── validation/
-├── evidence/
-└── README.md
-```
-
-As pastas serão criadas quando houver o primeiro artefato real correspondente.
-
-[← Voltar ao portfólio](../README.md)
+[← Voltar ao case principal](../README.md)
