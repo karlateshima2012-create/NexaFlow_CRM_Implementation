@@ -12,7 +12,7 @@ Quatorze fontes legadas continham duplicidades, formatos e regras inconsistentes
 
 - Inventário e auditoria de 14 fontes; modelo de objetos, relacionamentos, propriedades e governança.
 - Mapping origem → destino, ordem de carga e regras de identidade; ETL rastreável com Power Query e validações SQL.
-- 341 registros consolidados: 177 elegíveis e 164 em exceções/pendências rastreáveis. O pacote de migração do Projeto 1 tem seu próprio universo operacional; ele não é a coorte analítica do Projeto 3, que foi definida separadamente com 5 Deals. No Import Ready do Projeto 1, o objeto Deal contém 15 registros elegíveis; esse número descreve o escopo maior da migração, não a amostra analítica de 5 Deals SIM- do Projeto 3.
+- 341 registros consolidados: 177 elegíveis e 164 em exceções/pendências rastreáveis. O pacote de migração do Projeto 1 tem seu próprio universo operacional; ele não é a coorte analítica do Projeto 3, que foi definida separadamente com 5 Deals. No Import Ready do Projeto 1, o objeto Deal contém 15 registros elegíveis; esse número descreve o escopo maior da migração, não a amostra analítica de 5 Deals do Projeto 3.
 - Piloto no HubSpot: 9 registros criados em oito tipos de dataset, incluindo 2 Contacts no cenário de uma nota; isso não significa 9 linhas únicas de origem.
 - As associações financeiras em lote por API, a carga dos 177 elegíveis e o rollback transacional não foram demonstrados.
 
