@@ -1,59 +1,51 @@
-<div align="center">
-
 # Projeto 3 — Revenue Reporting & Operations Analytics
 
-### KPIs, HubSpot reporting, SQL de funil, dashboards e integração controlada
+**Status:** QA final concluído em 06/10/2026; Aulas 32–37 e Checkpoints CP19–CP22 encerrados, com limites registrados.
 
-![HubSpot](https://img.shields.io/badge/HubSpot-Reporting-FF7A59?style=flat-square&logo=hubspot&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Funnel%20Analytics-336791?style=flat-square&logo=postgresql&logoColor=white)
-![Status](https://img.shields.io/badge/status-planejado-64748B?style=flat-square)
+Terceira etapa do case NexaFlow: transformar dados sintéticos e regras operacionais em análises explicáveis para funil e acompanhamento de Deals.
 
-</div>
+## Fonte de verdade e resultado
 
-## Contexto
+A população analítica é exatamente **5 Deals SIM-**, presentes no CSV fonte validado e na tabela SQLite `deals_raw`. Os cinco Record IDs reconciliam entre CSV, SQLite, consultas SQL e resultados. Os dashboards HubSpot usam os mesmos cinco Deals e a distribuição coincide com QRY-002.
 
-Terceiro projeto do case **HubSpot CRM Implementation — B2B SaaS Simulation**, consolidado na Semana 7 a partir dos fundamentos de reporting e SQL desenvolvidos desde a Semana 2.
+| Deal Stage | Contagem |
+|---|---:|
+| Appointment Scheduled | 1 |
+| Qualified To Buy | 1 |
+| Closed Won | 1 |
+| Closed Lost | 2 |
+| **Total** | **5** |
 
-## Problema
+- **QRY-003:** 2 Deals abertos sem Next Activity Date informado; isso não prova ausência de tarefa.
+- **QRY-004:** 2 Closed Lost; um sem motivo bruto preenchido e um com motivo preenchido.
+- **QRY-005/006:** não executadas, pois faltam export de Interactions e histórico de handoff com timestamps.
 
-A liderança não possui visibilidade confiável do funil, conversão, aging, win rate, motivos de perda, qualidade dos dados e operação pós-venda.
+## Implementação e evidências
 
-## Objetivo
+A Aula 37 realizou lote controlado **CSV → SQLite**, com inserção, reprocessamento idempotente, atualização isolada em cópia de fixture, rejeição de chave ausente e reconciliação 5/5. **Sem API, sincronização contínua ou escrita no HubSpot.**
 
-Construir um sistema analítico reconciliado que conecte métricas, relatórios HubSpot, consultas SQL, dashboards e uma integração funcional com tratamento de exceções.
+- [Consulta SQL do funil](./sql/03_NexaFlow_Funnel_SQL_v1.0.sql)
+- [Relatório final de QA](./evidence/08_NexaFlow_Revenue_Reporting_Analytics_Report_v1.0.docx)
+- [Reconciliação da integração](./evidence/07_NexaFlow_Integration_Test_Reconciliation_v1.0.xlsx)
+- [Resultados SQL](./evidence/04_NexaFlow_SQL_Results_v1.0.xlsx)
+- [Dashboard executivo — captura real](./evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
+- [Dashboard operacional — captura real](./evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
+- [Resumo do QA](./evidence/QA_Audit_Summary.txt)
 
-## Competências previstas
+### Dashboard executivo
 
-- definição e governança de KPIs;
-- relatórios e dashboards HubSpot;
-- Excel aplicado à análise;
-- SQL de funil, conversão e aging;
-- win rate e qualidade de dados;
-- integração e mapeamento de campos;
-- testes de sucesso e falha;
-- log de exceções e reconciliação;
-- análise e storytelling executivo.
+![Dashboard executivo HubSpot com a distribuição da coorte de 5 Deals](./evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
 
-## Entregáveis previstos
+### Dashboard operacional
 
-- catálogo de métricas;
-- dashboard operacional;
-- dashboard executivo;
-- relatório de qualidade;
-- consultas SQL;
-- análise executiva;
-- integração funcional;
-- mapeamento de campos;
-- testes de sucesso e falha;
-- log de exceções;
-- reconciliação.
+![Dashboard operacional HubSpot com Deals abertos sem Next Activity Date informado](./evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
 
-## Regra da integração
+## Limites de interpretação
 
-Será implementada somente uma integração. Ela deverá documentar caso de uso, origem e destino, mapeamento, regra de criação ou atualização, testes, exceções e reconciliação.
+Os dados são fixtures sintéticas e os resultados representam apenas a coorte declarada, não o desempenho de negócio real. `Amount` é um campo do Deal; não comprova pagamento nem receita reconhecida. Next Activity Date vazio não prova inexistência de atividade.
 
-## Critério de conclusão
+## Competências demonstradas
 
-O projeto será concluído somente quando métricas, consultas, dashboards e integração estiverem consistentes entre si, testados e explicáveis a partir das evidências.
+Definição e governança de métricas · HubSpot reporting · SQL de funil · análise de qualidade · reconciliação de dados · lote CSV para SQLite · comunicação executiva de resultados e limitações.
 
-[← Voltar ao portfólio](../README.md)
+[← Voltar ao case principal](../README.md)

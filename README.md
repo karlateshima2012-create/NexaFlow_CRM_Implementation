@@ -1,120 +1,84 @@
 <div align="center">
 
-# Creative Print RevOps Lab
+# NexaFlow | CRM do dado à decisão
 
-### CRM Operations · HubSpot · Data Quality · Automation · Reporting
+### Case de CRM Operations & HubSpot • B2B SaaS fictício • Portfólio independente
 
-Implementação end-to-end de CRM para uma empresa brasileira B2B SaaS simulada, desenvolvida em um bootcamp prático de 8 semanas.
+[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops) · [Apresentação completa (PDF)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
 
+![Status do case](https://img.shields.io/badge/case-3%20projetos%20conclu%C3%ADdos-0F766E?style=for-the-badge)
 ![HubSpot](https://img.shields.io/badge/HubSpot-CRM%20Operations-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Operations%20Analytics-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Status](https://img.shields.io/badge/status-em%20andamento-2563EB?style=for-the-badge)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karla%20Teshima-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karla-teshima-revops)
 
 </div>
 
----
+![Jornada NexaFlow: arquitetura e migração, operação e automação, reporting e analytics](./assets/nexaflow-journey.svg)
 
-## Sobre o projeto
+## Visão do case
 
-Este repositório documenta um único case principal:
+A NexaFlow é uma empresa **fictícia** B2B SaaS usada para aplicar conceitos de CRM Operations e Revenue Operations em ambiente de treinamento. O portfólio acompanha a jornada do diagnóstico de dados à operação comercial e à análise executiva.
 
-**HubSpot CRM Implementation — B2B SaaS Simulation**
+> Este é um case independente de treinamento, não um projeto para cliente nem uma implantação em produção. Os registros analíticos são fixtures sintéticas.
 
-O case utiliza dados sintéticos, explicitamente identificados como simulação. Nenhum cliente, volume ou resultado será apresentado como real.
+## Projetos
 
-A execução segue:
+| Projeto | Problema trabalhado | Execução e resultado documentado |
+|---|---|---|
+| [01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/) | Dados dispersos, inconsistências e relações sem rastreabilidade | Auditoria de 14 fontes; 341 registros consolidados, 177 elegíveis e 164 exceções/pendências; piloto HubSpot de 9 registros selecionados. O piloto não representa carga integral. |
+| [02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/) | Critérios comerciais, ownership, SLAs e handoffs pouco consistentes | Regras e workflows implementados/testados em ambiente de treinamento; resultados, passos manuais e desvios documentados. |
+| [03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/) | Necessidade de métricas e dashboards reconciliados | Coorte explícita de 5 Deals alinhada entre CSV, SQLite, SQL e dashboards; lote controlado CSV → SQLite, sem API ou sincronização. |
 
-```text
-Problema → Diagnóstico → Metodologia → Decisão → Implementação → Evidência → Resultado → Competência
-```
+## Destaques do Projeto 3
 
-> Planejamento não será apresentado como implementação. Os artefatos serão publicados somente depois de produzidos e validados.
+A mesma coorte de **5 Deals sintéticos** fundamenta SQL, planilha de resultados e dashboards HubSpot:
 
-## Estado atual
+- Appointment Scheduled: 1
+- Qualified To Buy: 1
+- Closed Won: 1
+- Closed Lost: 2
+- QRY-003 encontrou 2 Deals abertos sem Next Activity Date informado e nenhum sem owner.
 
-- **Período:** 24 de agosto a 17 de outubro de 2026
-- **Semana 1:** HubSpot Reporting Certification — concluída
-- **Semana atual:** Semana 2 — Discovery, requisitos e arquitetura
-- **Projeto atual:** Projeto 1 — CRM Architecture & Data Migration
-- **Status geral:** em andamento
+O campo vazio não prova ausência de tarefa. `Amount` do Deal não prova pagamento nem receita reconhecida. QRY-005/006 não foram executadas porque faltam os exports necessários.
 
-## Projetos conectados
+### Dashboards HubSpot
 
-| Projeto | Período | Escopo | Status |
-|---|---|---|---|
-| **[01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/)** | Semanas 2–4 | Discovery, requisitos, arquitetura, governança, qualidade, migração e reconciliação | 🔵 Em andamento |
-| **[02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/)** | Semanas 5–6 | Lifecycle, pipeline, SLA, ownership, workflows, handoffs e onboarding | ⚪ Planejado |
-| **[03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/)** | Semana 7 | KPIs, SQL de funil, dashboards, qualidade, integração e análise executiva | ⚪ Planejado |
+**Executivo** — distribuição dos 5 Deals por estágio.
 
-A Semana 8 consolida QA, documentação, demonstração, portfólio e preparação para candidaturas. Ela não cria um quarto projeto.
+![Dashboard executivo HubSpot](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
 
-## Empresa e dados simulados
+**Operacional** — Deals abertos sem Next Activity Date informado.
 
-O laboratório representa uma empresa brasileira B2B SaaS com Marketing, SDRs, executivos de vendas, Customer Success e suporte; aquisição inbound e outbound; assinatura, onboarding, expansão, renovação e churn.
+![Dashboard operacional HubSpot](./03-revenue-reporting-operations-analytics/evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
 
-Base sintética prevista:
+## Capacidades demonstradas
 
-- 500 contatos;
-- 150 empresas;
-- 220 negócios;
-- 180 tickets;
-- 12 meses de histórico;
-- 6 usuários internos.
+- CRM data architecture, data audit e governança;
+- source-to-target mapping, ETL/Power Query e qualidade de dados;
+- desenho de lifecycle, pipeline, ownership, SLA e handoffs;
+- configuração e testes de workflows no HubSpot;
+- SQL aplicado a funil, qualidade e reconciliação;
+- HubSpot reporting, análise operacional e comunicação executiva;
+- QA, registro de limites e documentação orientada a evidências.
 
-## Progressão técnica
+## Limites de interpretação
 
-### SQL
+- NexaFlow e registros CRM são fictícios; os dados analíticos são fixtures sintéticas.
+- Projeto 1: pacote de migração preparado e piloto representativo; não houve carga integral dos 177 elegíveis.
+- Projeto 2: cenários financeiros e de onboarding são simulados/manuais quando indicado; sem transação ou automação financeira de produção.
+- Projeto 3: integração de lote manual CSV → SQLite, sem API, sincronização contínua ou escrita de volta no HubSpot.
+- Deal Amount não comprova pagamento nem receita reconhecida.
+- Capturas e relatórios demonstram um ambiente de treinamento; não representam resultados de uma empresa real.
+- Não há vídeo no portfólio; a apresentação usa documentos e capturas de tela.
 
-- Semana 3: consultas básicas;
-- Semana 4: qualidade, duplicidades e reconciliação;
-- Semana 5: pipeline, responsáveis e atividades;
-- Semana 7: funil, conversão e aging.
+## Navegação
 
-### Reporting
-
-- Semana 2: perguntas de negócio;
-- Semana 3: propriedades reportáveis;
-- Semana 4: qualidade dos dados;
-- Semana 5: métricas do pipeline;
-- Semana 6: monitoramento de workflows e SLAs;
-- Semana 7: dashboards consolidados.
-
-### Integração
-
-Será implementada somente uma integração, com caso de uso, origem e destino, mapeamento, regra de criação ou atualização, testes de sucesso e falha, log de exceções e reconciliação.
-
-## Tecnologias previstas
-
-| Tecnologia | Uso |
-|---|---|
-| **HubSpot CRM** | Objetos, propriedades, associações, importação, pipeline, workflows e reporting |
-| **Excel / Power Query** | Auditoria, limpeza, transformação, mapping e reconciliação |
-| **SQL** | Qualidade, pipeline, funil, conversão e aging |
-| **Integração externa** | Sincronização controlada e tratamento de exceções |
-| **GitHub** | Versionamento, documentação técnica e evidências |
-
-As tecnologias somente serão tratadas como competências demonstráveis quando houver implementação, testes e evidências publicados.
-
-## Estrutura
-
-```text
-Creative-Print-RevOps-Lab/
-├── 01-crm-architecture-data-migration/
-├── 02-lifecycle-pipeline-automation/
-├── 03-revenue-reporting-operations-analytics/
-└── README.md
-```
-
-Não haverá pastas diárias nem arquivos vazios para simular progresso.
+Comece pelo [PDF de apresentação](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf) e depois abra o README de cada projeto. Os documentos publicados são evidências selecionadas; bases brutas e arquivos técnicos de execução não fazem parte deste repositório público.
 
 ---
 
 <div align="center">
 
 **Karla Teshima**  
-Founder & CEO, Creative Print  
 [LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops)
 
 </div>
