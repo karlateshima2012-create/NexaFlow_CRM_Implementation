@@ -1,107 +1,64 @@
 <div align="center">
 
-# NexaFlow_CRM_Implementation
+# NexaFlow | CRM do dado à decisão
 
-### NexaFlow | CRM do dado à decisão
+### Uma jornada de organização comercial, operação e visibilidade do funil
 
-Case de CRM Operations & HubSpot • B2B SaaS fictício • Portfólio independente
+[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops) · [Ver apresentação do projeto (PDF)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
 
-[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops) · [Apresentação completa (PDF)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
-
-![Status do case](https://img.shields.io/badge/case-3%20projetos%20conclu%C3%ADdos-0F766E?style=for-the-badge)
-![HubSpot](https://img.shields.io/badge/HubSpot-CRM%20Operations-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Operations%20Analytics-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Case concluído](https://img.shields.io/badge/case-3%20etapas%20conclu%C3%ADdas-0F766E?style=for-the-badge)
+![CRM](https://img.shields.io/badge/CRM-HubSpot-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
 
 </div>
 
-![Jornada NexaFlow: arquitetura e migração, operação e automação, reporting e analytics](./assets/nexaflow-journey.svg)
+![Jornada NexaFlow: organizar dados, estruturar a operação comercial e dar visibilidade ao funil](./assets/nexaflow-journey.svg)
 
-## Visão do case
+## O projeto
 
-A NexaFlow é uma empresa **fictícia** B2B SaaS usada para aplicar conceitos de CRM Operations e Revenue Operations em ambiente de treinamento. O portfólio acompanha a jornada do diagnóstico de dados à operação comercial e à análise executiva.
+A NexaFlow é uma empresa B2B SaaS fictícia. O projeto parte de um cenário em que as informações comerciais estavam espalhadas, as regras de passagem entre equipes não eram consistentes e a liderança tinha pouca clareza sobre o andamento dos negócios.
 
-> Este é um case independente de treinamento, não um projeto para cliente nem uma implantação em produção. Os registros analíticos são fixtures sintéticas.
+A proposta foi organizar o caminho inteiro: entender e preparar os dados, estabelecer uma operação comercial rastreável e apresentar resultados que pudessem ser conferidos entre si.
 
-## Projetos
+## O que foi realizado
 
-| Projeto | Problema trabalhado | Execução e resultado documentado |
+| Etapa | Trabalho | Resultado |
 |---|---|---|
-| [01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/) | Dados dispersos, inconsistências e relações sem rastreabilidade | Auditoria de 14 fontes; 341 registros consolidados, 177 elegíveis e 164 exceções/pendências; piloto HubSpot de 9 registros selecionados. O piloto não representa carga integral. |
-| [02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/) | Critérios comerciais, ownership, SLAs e handoffs pouco consistentes | Regras e workflows implementados/testados em ambiente de treinamento; resultados, passos manuais e desvios documentados. |
-| [03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/) | Necessidade de métricas e dashboards reconciliados | Coorte explícita de 5 Deals alinhada entre CSV, SQLite, SQL e dashboards; lote controlado CSV → SQLite, sem API ou sincronização. |
+| [01 — Arquitetura e migração de CRM](./01-crm-architecture-data-migration/) | Levantamento de fontes, regras e necessidades; preparação dos dados e teste de importação no HubSpot | 14 fontes avaliadas; 341 registros consolidados, com 177 elegíveis e 164 em exceções ou pendências. Um piloto criou 9 registros no HubSpot, incluindo 2 Contacts. A migração integral não foi executada. |
+| [02 — Operação comercial e automações](./02-lifecycle-pipeline-automation/) | Organização das etapas de qualificação e vendas, responsabilidades, prazos, alertas e passagem para onboarding | Regras operacionais e automações foram testadas. Os passos manuais e os desvios encontrados foram registrados para que o processo não prometa comportamentos que não foram comprovados. |
+| [03 — Relatórios e análise de receita](./03-revenue-reporting-operations-analytics/) | Construção de uma visão operacional e executiva para acompanhar negócios | Os painéis e a análise usaram a mesma amostra de **5 negócios**: 1 em Appointment Scheduled, 1 em Qualified To Buy, 1 Closed Won e 2 Closed Lost. Dois negócios abertos não tinham uma data de próxima atividade registrada; nenhum estava sem responsável. |
 
-## Destaques do Projeto 3
+## Evidências dos painéis
 
-A mesma coorte de **5 Deals sintéticos** fundamenta SQL, planilha de resultados e dashboards HubSpot:
+**Visão executiva** — distribuição dos cinco negócios por etapa.
 
-- Appointment Scheduled: 1
-- Qualified To Buy: 1
-- Closed Won: 1
-- Closed Lost: 2
-- QRY-003 encontrou 2 Deals abertos sem Next Activity Date informado e nenhum sem owner.
+![Painel executivo NexaFlow](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
 
-O campo vazio não prova ausência de tarefa. `Amount` do Deal não prova pagamento nem receita reconhecida. QRY-005/006 não foram executadas porque faltam os exports necessários.
+**Acompanhamento operacional** — negócios abertos sem data de próxima atividade registrada.
 
-Os **15 Deals elegíveis** do pacote de migração do Projeto 1 pertencem ao universo preparado para aquele piloto. Eles não são a população analítica do Projeto 3, cuja coorte verificada tem **5 Deals**.
+![Painel operacional NexaFlow](./03-revenue-reporting-operations-analytics/evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
 
-### Dashboards HubSpot
+## O que o projeto trouxe
 
-**Executivo** — distribuição dos 5 Deals por estágio.
+- Um caminho documentado entre diagnóstico, preparação de dados, operação comercial e acompanhamento do funil.
+- Uma separação clara entre registros preparados, exceções e o piloto realmente executado.
+- Regras comerciais testadas com os limites encontrados descritos junto dos resultados.
+- Painéis alinhados a uma população definida, evitando comparar contagens de escopos diferentes.
+- Uma leitura cuidadosa dos dados: campo sem preenchimento não prova ausência de atividade, e valor de negócio não comprova pagamento nem receita reconhecida.
 
-![Dashboard executivo HubSpot](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
+## O que este case demonstra
 
-**Operacional** — Deals abertos sem Next Activity Date informado.
+Organização e qualidade de dados · desenho de processos comerciais · configuração e teste de regras no CRM · acompanhamento do funil · validação de resultados · comunicação clara de escopo e limitações.
 
-![Dashboard operacional HubSpot](./03-revenue-reporting-operations-analytics/evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
+## Conheça cada etapa
 
-## Capacidades demonstradas
+Os READMEs dos [Projetos 1](./01-crm-architecture-data-migration/), [2](./02-lifecycle-pipeline-automation/) e [3](./03-revenue-reporting-operations-analytics/) apresentam as decisões e evidências de cada parte do trabalho.
 
-- CRM data architecture, data audit e governança;
-- source-to-target mapping, ETL/Power Query e qualidade de dados;
-- desenho de lifecycle, pipeline, ownership, SLA e handoffs;
-- configuração e testes de workflows no HubSpot;
-- SQL aplicado a funil, qualidade e reconciliação;
-- HubSpot reporting, análise operacional e comunicação executiva;
-- QA, registro de limites e documentação orientada a evidências.
-
-## Aprendizados do case
-
-- **Preparação não é migração integral:** o Projeto 1 separa universo elegível, exceções e piloto realmente executado.
-- **Configuração precisa de validação:** no Projeto 2, persistência do owner e comportamento de workflows foram conferidos em testes; etapas manuais e desvios ficaram registrados.
-- **Campo vazio não prova ausência de atividade:** `Next Activity Date` precisa ser interpretado junto à timeline e ao contexto operacional.
-- **Valor do Deal não é receita reconhecida:** `Amount` sozinho não comprova pagamento ou reconhecimento contábil.
-- **Métrica depende de uma população definida:** a coorte de 5 do Projeto 3 foi reconciliada entre CSV, SQLite, SQL e dashboards.
-
-## Limites de interpretação
-
-- NexaFlow e registros CRM são fictícios; os dados analíticos são fixtures sintéticas.
-- Projeto 1: pacote de migração preparado e piloto representativo; não houve carga integral dos 177 elegíveis.
-- Projeto 2: cenários financeiros e de onboarding são simulados/manuais quando indicado; sem transação ou automação financeira de produção.
-- Projeto 3: integração de lote manual CSV → SQLite, sem API, sincronização contínua ou escrita de volta no HubSpot.
-- Deal Amount não comprova pagamento nem receita reconhecida.
-- Capturas e relatórios demonstram um ambiente de treinamento; não representam resultados de uma empresa real.
-- Não há vídeo no portfólio; a apresentação usa documentos e capturas de tela.
-
-## Estrutura do repositório
-
-```text
-NexaFlow_CRM_Implementation/
-├── 01-crm-architecture-data-migration/
-├── 02-lifecycle-pipeline-automation/
-├── 03-revenue-reporting-operations-analytics/
-├── assets/
-└── README.md
-```
-
-## Navegação
-
-Comece pelo [PDF de apresentação](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf) e depois abra o README de cada projeto. Os documentos publicados são evidências selecionadas; bases brutas e arquivos técnicos de execução não fazem parte deste repositório público.
+> **Sobre os dados:** a NexaFlow e os registros usados são fictícios e sintéticos. Os números demonstram o trabalho realizado neste case; não representam resultados de uma empresa real. O campo de valor dos negócios não foi tratado como prova de receita.
 
 ---
 
 <div align="center">
 
-**Karla Teshima**  
-[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops)
+**Karla Teshima** · [LinkedIn](https://www.linkedin.com/in/karla-teshima-revops)
 
 </div>
