@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="854" viewBox="0 0 1500 854" role="img" aria-labelledby="title desc">
+<title id="title">Projeto 1 — Do campo de origem à propriedade do CRM</title><desc id="desc">Recorte documental da planilha: regras de transformação e destino de seis campos.. Evidência de mapeamento documentado; não comprova a migração integral.</desc>
+<rect width="1500" height="854" fill="#f4f7fb"/>
+<rect width="1500" height="145" fill="#0e1930"/>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+<text x="40" y="55" fill="#1fbeaf" font-size="18">NEXAFLOW | CRM DO DADO À DECISÃO</text>
+<text x="40" y="95" fill="white" font-size="30" font-weight="bold">Projeto 1 — Do campo de origem à propriedade do CRM</text>
+<text x="40" y="165" fill="#334155" font-size="19">Recorte documental da planilha: regras de transformação e destino de seis campos.</text>
+<rect x="40" y="185" width="190" height="55" fill="#17465c"/>
+<text x="58" y="219" fill="white" font-size="19" font-weight="bold">Campo de origem</text>
+<rect x="230" y="185" width="150" height="55" fill="#17465c"/>
+<text x="248" y="219" fill="white" font-size="19" font-weight="bold">Objeto</text>
+<rect x="380" y="185" width="210" height="55" fill="#17465c"/>
+<text x="398" y="219" fill="white" font-size="19" font-weight="bold">Propriedade</text>
+<rect x="590" y="185" width="180" height="55" fill="#17465c"/>
+<text x="608" y="219" fill="white" font-size="19" font-weight="bold">Ação</text>
+<rect x="770" y="185" width="690" height="55" fill="#17465c"/>
+<text x="788" y="219" fill="white" font-size="19" font-weight="bold">Regra de transformação</text>
+<rect x="40" y="240" width="190" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="58" y="270" fill="#182b43" font-size="19">nome</text>
+<rect x="230" y="240" width="150" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="248" y="270" fill="#182b43" font-size="19">Contato</text>
+<rect x="380" y="240" width="210" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="398" y="270" fill="#182b43" font-size="19">firstname</text>
+<rect x="590" y="240" width="180" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="608" y="270" fill="#182b43" font-size="19">Transformar</text>
+<rect x="770" y="240" width="690" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="788" y="270" fill="#182b43" font-size="19">Separar nome completo em firstname e lastname conforme</text>
+<text x="788" y="297" fill="#182b43" font-size="19">disponibilidade</text>
+<rect x="40" y="328" width="190" height="61" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="58" y="358" fill="#182b43" font-size="19">nome</text>
+<rect x="230" y="328" width="150" height="61" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="248" y="358" fill="#182b43" font-size="19">Contato</text>
+<rect x="380" y="328" width="210" height="61" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="398" y="358" fill="#182b43" font-size="19">lastname</text>
+<rect x="590" y="328" width="180" height="61" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="608" y="358" fill="#182b43" font-size="19">Derivar</text>
+<rect x="770" y="328" width="690" height="61" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="788" y="358" fill="#182b43" font-size="19">Extrair sobrenome do nome completo quando disponível</text>
+<rect x="40" y="389" width="190" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="58" y="419" fill="#182b43" font-size="19">email</text>
+<rect x="230" y="389" width="150" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="248" y="419" fill="#182b43" font-size="19">Contato</text>
+<rect x="380" y="389" width="210" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="398" y="419" fill="#182b43" font-size="19">email</text>
+<rect x="590" y="389" width="180" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="608" y="419" fill="#182b43" font-size="19">Transformar</text>
+<rect x="770" y="389" width="690" height="88" fill="white" stroke="#cbd5e1"/>
+<text x="788" y="419" fill="#182b43" font-size="19">Converter para minúsculas, remover espaços excedentes e validar</text>
+<text x="788" y="446" fill="#182b43" font-size="19">formato</text>
+<rect x="40" y="477" width="190" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="58" y="507" fill="#182b43" font-size="19">telefone</text>
+<rect x="230" y="477" width="150" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="248" y="507" fill="#182b43" font-size="19">Contato</text>
+<rect x="380" y="477" width="210" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="398" y="507" fill="#182b43" font-size="19">phone</text>
+<rect x="590" y="477" width="180" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="608" y="507" fill="#182b43" font-size="19">Transformar</text>
+<rect x="770" y="477" width="690" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="788" y="507" fill="#182b43" font-size="19">Remover caracteres de apresentação e normalizar para formato</text>
+<text x="788" y="534" fill="#182b43" font-size="19">internacional E.164 com código do país</text>
+<rect x="40" y="565" width="190" height="61" fill="white" stroke="#cbd5e1"/>
+<text x="58" y="595" fill="#182b43" font-size="19">cargo</text>
+<rect x="230" y="565" width="150" height="61" fill="white" stroke="#cbd5e1"/>
+<text x="248" y="595" fill="#182b43" font-size="19">Contato</text>
+<rect x="380" y="565" width="210" height="61" fill="white" stroke="#cbd5e1"/>
+<text x="398" y="595" fill="#182b43" font-size="19">job_title</text>
+<rect x="590" y="565" width="180" height="61" fill="white" stroke="#cbd5e1"/>
+<text x="608" y="595" fill="#182b43" font-size="19">Transformar</text>
+<rect x="770" y="565" width="690" height="61" fill="white" stroke="#cbd5e1"/>
+<text x="788" y="595" fill="#182b43" font-size="19">Remover espaços excedentes e padronizar texto</text>
+<rect x="40" y="626" width="190" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="58" y="656" fill="#182b43" font-size="19">origem</text>
+<rect x="230" y="626" width="150" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="248" y="656" fill="#182b43" font-size="19">Contato</text>
+<rect x="380" y="626" width="210" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="398" y="656" fill="#182b43" font-size="19">original_source</text>
+<rect x="590" y="626" width="180" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="608" y="656" fill="#182b43" font-size="19">Transformar</text>
+<rect x="770" y="626" width="690" height="88" fill="#eaf1f8" stroke="#cbd5e1"/>
+<text x="788" y="656" fill="#182b43" font-size="19">Mapear valores legados para a lista controlada do Data Model e</text>
+<text x="788" y="683" fill="#182b43" font-size="19">preservar a primeira origem conhecida</text>
+<text x="40" y="752" fill="#475569" font-size="16">Fonte: 12_NexaFlow_Migration_Mapping_v1.0.xlsx · aba 02_Field_Mapping · linhas 2–7 · colunas B, C, D, F e G.</text>
+<text x="40" y="824" fill="#17465c" font-size="18" font-weight="bold">Evidência de mapeamento documentado; não comprova a migração integral.</text>
+</g></svg>

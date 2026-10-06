@@ -19,6 +19,12 @@ A NexaFlow é uma empresa B2B SaaS fictícia. O projeto parte de um cenário em 
 
 A proposta foi organizar o caminho inteiro: entender e preparar os dados, estabelecer uma operação comercial rastreável e apresentar resultados que pudessem ser conferidos entre si.
 
+## Minha contribuição
+
+Sou Karla Teshima e conduzi o desenvolvimento deste case, participando do diagnóstico e da preparação dos dados, da definição dos processos comerciais, da validação dos cenários e da organização das evidências para apresentação.
+
+O trabalho foi desenvolvido com apoio de IA na análise, implementação técnica, documentação e QA. As contribuições abaixo descrevem minha participação no case; não pressupõem execução individual de todas as tarefas.
+
 ## O que foi realizado
 
 | Etapa | Trabalho | Resultado |

@@ -1,12 +1,27 @@
-# Projeto 3 — Revenue Reporting & Operations Analytics
+# NexaFlow — CRM do dado à decisão
+## Projeto 3 · Relatórios e análise de receita
 
-**Status:** QA final concluído em 06/10/2026; Aulas 32–37 e Checkpoints CP19–CP22 encerrados, com limites registrados.
+**Concluído em 06/10/2026:** QA final encerrado, com resultados e limites registrados.
 
-Terceira etapa do case NexaFlow: transformar dados sintéticos e regras operacionais em análises explicáveis para funil e acompanhamento de Deals.
+## Problema
 
-## Fonte de verdade e resultado
+As regras comerciais precisavam se transformar em análises que pudessem ser conferidas entre si. O desafio era definir uma população estável, alinhar resultados e painéis e identificar sinais operacionais sem extrapolar o significado dos campos.
 
-A população analítica é exatamente **5 Deals SIM-**, presentes no CSV fonte validado e na tabela SQLite `deals_raw`. Os cinco Record IDs reconciliam entre CSV, SQLite, consultas SQL e resultados. Os dashboards HubSpot usam os mesmos cinco Deals e a distribuição coincide com QRY-002.
+## Minha contribuição
+
+Participei da revisão das métricas e do escopo analítico, da conferência dos resultados e painéis e da validação das evidências de reconciliação. Organizei a apresentação dos achados e dos limites, com apoio de IA nas consultas, análise, implementação técnica, documentação e QA.
+
+## Trabalho realizado
+
+- Definição da amostra analítica e conferência do mapeamento das colunas.
+- Consultas SQL de distribuição do funil e qualidade dos registros.
+- Construção de visões operacional e executiva no HubSpot.
+- Teste controlado de lote CSV → SQLite: inserção, reprocessamento idempotente, atualização em cópia de fixture e rejeição de chave ausente.
+- Reconciliação dos cinco registros entre fonte, banco, consultas, resultados e dashboards.
+
+## Resultados
+
+A análise e os dashboards usam os mesmos **5 Deals sintéticos**.
 
 | Deal Stage | Contagem |
 |---|---:|
@@ -16,36 +31,38 @@ A população analítica é exatamente **5 Deals SIM-**, presentes no CSV fonte 
 | Closed Lost | 2 |
 | **Total** | **5** |
 
-- **QRY-003:** 2 Deals abertos sem Next Activity Date informado; isso não prova ausência de tarefa.
-- **QRY-004:** 2 Closed Lost; um sem motivo bruto preenchido e um com motivo preenchido.
-- **QRY-005/006:** não executadas, pois faltam export de Interactions e histórico de handoff com timestamps.
+- **QRY-003:** 2 Deals abertos sem Next Activity Date informado; nenhum deles sem owner.
+- **QRY-004:** 2 Closed Lost; um sem motivo bruto preenchido e outro com motivo preenchido.
+- **Reconciliação:** os cinco Record IDs conferem entre CSV, SQLite e resultados; a distribuição do dashboard coincide com QRY-002.
 
-## Implementação e evidências
+As consultas QRY-005/006 não foram executadas: faltam export de Interactions e histórico de handoff com timestamps. Não foram estimados resultados para essas análises.
 
-A Aula 37 realizou lote controlado **CSV → SQLite**, com inserção, reprocessamento idempotente, atualização isolada em cópia de fixture, rejeição de chave ausente e reconciliação 5/5. **Sem API, sincronização contínua ou escrita no HubSpot.**
+## Evidências
 
-- [Consulta SQL do funil](./sql/03_NexaFlow_Funnel_SQL_v1.0.sql)
-- [Relatório final de QA](./evidence/08_NexaFlow_Revenue_Reporting_Analytics_Report_v1.0.docx)
-- [Reconciliação da integração](./evidence/07_NexaFlow_Integration_Test_Reconciliation_v1.0.xlsx)
+### Visão executiva
+
+![Dashboard executivo com a distribuição dos cinco Deals](./evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
+
+Captura do dashboard HubSpot usado para conferir a distribuição por estágio.
+
+### Acompanhamento operacional
+
+![Dashboard operacional com Deals abertos sem Next Activity Date informado](./evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
+
+Captura do dashboard HubSpot usado para acompanhar campos operacionais. Next Activity Date vazio não prova inexistência de tarefa ou atividade.
+
+- [Relatório final: análise, QA e limites](./evidence/08_NexaFlow_Revenue_Reporting_Analytics_Report_v1.0.docx)
 - [Resultados SQL](./evidence/04_NexaFlow_SQL_Results_v1.0.xlsx)
-- [Dashboard executivo — captura real](./evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
-- [Dashboard operacional — captura real](./evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
+- [Reconciliação do lote controlado](./evidence/07_NexaFlow_Integration_Test_Reconciliation_v1.0.xlsx)
+- [Consultas SQL](./sql/03_NexaFlow_Funnel_SQL_v1.0.sql)
 - [Resumo do QA](./evidence/QA_Audit_Summary.txt)
 
-### Dashboard executivo
+## Aprendizados e competências
 
-![Dashboard executivo HubSpot com a distribuição da coorte de 5 Deals](./evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
+A entrega demonstra definição de métricas, análise de funil, SQL, reporting no HubSpot, reconciliação e comunicação de resultados. O principal aprendizado foi manter o mesmo escopo em todas as análises e interpretar campos ausentes e valores comerciais com cuidado.
 
-### Dashboard operacional
+A integração foi um lote controlado CSV → SQLite, sem API, sincronização contínua ou escrita de volta no HubSpot. O repositório publica consultas e resultados selecionados; sem as bases e o esquema, o SQL não constitui um pacote de execução autônomo.
 
-![Dashboard operacional HubSpot com Deals abertos sem Next Activity Date informado](./evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
+Os dados são sintéticos e não representam desempenho empresarial real. Amount não comprova pagamento nem receita reconhecida.
 
-## Limites de interpretação
-
-Os dados são fixtures sintéticas e os resultados representam apenas a coorte declarada, não o desempenho de negócio real. `Amount` é um campo do Deal; não comprova pagamento nem receita reconhecida. Next Activity Date vazio não prova inexistência de atividade.
-
-## Competências demonstradas
-
-Definição e governança de métricas · HubSpot reporting · SQL de funil · análise de qualidade · reconciliação de dados · lote CSV para SQLite · comunicação executiva de resultados e limitações.
-
-[← Voltar ao case principal](../README.md)
+[← Etapa anterior: operação e automações](../02-lifecycle-pipeline-automation/) · [Apresentação do case](../README.md)
