@@ -1,120 +1,64 @@
 <div align="center">
 
-# Creative Print RevOps Lab
+# NexaFlow | CRM do dado à decisão
 
-### CRM Operations · HubSpot · Data Quality · Automation · Reporting
+### Uma jornada de organização comercial, operação e visibilidade do funil
 
-Implementação end-to-end de CRM para uma empresa brasileira B2B SaaS simulada, desenvolvida em um bootcamp prático de 8 semanas.
+[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops) · [Ver apresentação do projeto (PDF)](./assets/NexaFlow_Apresentacao_de_Projeto_Portfolio.pdf)
 
-![HubSpot](https://img.shields.io/badge/HubSpot-CRM%20Operations-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-Operations%20Analytics-336791?style=for-the-badge&logo=postgresql&logoColor=white)
-![Status](https://img.shields.io/badge/status-em%20andamento-2563EB?style=for-the-badge)
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Karla%20Teshima-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karla-teshima-revops)
+![Case concluído](https://img.shields.io/badge/case-3%20etapas%20conclu%C3%ADdas-0F766E?style=for-the-badge)
+![CRM](https://img.shields.io/badge/CRM-HubSpot-FF7A59?style=for-the-badge&logo=hubspot&logoColor=white)
 
 </div>
 
----
+![Jornada NexaFlow: organizar dados, estruturar a operação comercial e dar visibilidade ao funil](./assets/nexaflow-journey.svg)
 
-## Sobre o projeto
+## O projeto
 
-Este repositório documenta um único case principal:
+A NexaFlow é uma empresa B2B SaaS fictícia. O projeto parte de um cenário em que as informações comerciais estavam espalhadas, as regras de passagem entre equipes não eram consistentes e a liderança tinha pouca clareza sobre o andamento dos negócios.
 
-**HubSpot CRM Implementation — B2B SaaS Simulation**
+A proposta foi organizar o caminho inteiro: entender e preparar os dados, estabelecer uma operação comercial rastreável e apresentar resultados que pudessem ser conferidos entre si.
 
-O case utiliza dados sintéticos, explicitamente identificados como simulação. Nenhum cliente, volume ou resultado será apresentado como real.
+## O que foi realizado
 
-A execução segue:
+| Etapa | Trabalho | Resultado |
+|---|---|---|
+| [01 — Arquitetura e migração de CRM](./01-crm-architecture-data-migration/) | Levantamento de fontes, regras e necessidades; preparação dos dados e teste de importação no HubSpot | 14 fontes avaliadas; 341 registros consolidados, com 177 elegíveis e 164 em exceções ou pendências. Um piloto criou 9 registros no HubSpot, incluindo 2 Contacts. A migração integral não foi executada. |
+| [02 — Operação comercial e automações](./02-lifecycle-pipeline-automation/) | Organização das etapas de qualificação e vendas, responsabilidades, prazos, alertas e passagem para onboarding | Regras operacionais e automações foram testadas. Os passos manuais e os desvios encontrados foram registrados para que o processo não prometa comportamentos que não foram comprovados. |
+| [03 — Relatórios e análise de receita](./03-revenue-reporting-operations-analytics/) | Construção de uma visão operacional e executiva para acompanhar negócios | Os painéis e a análise usaram a mesma amostra de **5 negócios**: 1 em Appointment Scheduled, 1 em Qualified To Buy, 1 Closed Won e 2 Closed Lost. Dois negócios abertos não tinham uma data de próxima atividade registrada; nenhum estava sem responsável. |
 
-```text
-Problema → Diagnóstico → Metodologia → Decisão → Implementação → Evidência → Resultado → Competência
-```
+## Evidências dos painéis
 
-> Planejamento não será apresentado como implementação. Os artefatos serão publicados somente depois de produzidos e validados.
+**Visão executiva** — distribuição dos cinco negócios por etapa.
 
-## Estado atual
+![Painel executivo NexaFlow](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg)
 
-- **Período:** 24 de agosto a 17 de outubro de 2026
-- **Semana 1:** HubSpot Reporting Certification — concluída
-- **Semana atual:** Semana 2 — Discovery, requisitos e arquitetura
-- **Projeto atual:** Projeto 1 — CRM Architecture & Data Migration
-- **Status geral:** em andamento
+**Acompanhamento operacional** — negócios abertos sem data de próxima atividade registrada.
 
-## Projetos conectados
+![Painel operacional NexaFlow](./03-revenue-reporting-operations-analytics/evidence/05_NexaFlow_Operational_Deals_Dashboard_Evidence_v1.0.jpg)
 
-| Projeto | Período | Escopo | Status |
-|---|---|---|---|
-| **[01 — CRM Architecture & Data Migration](./01-crm-architecture-data-migration/)** | Semanas 2–4 | Discovery, requisitos, arquitetura, governança, qualidade, migração e reconciliação | 🔵 Em andamento |
-| **[02 — Lifecycle, Pipeline & Automation](./02-lifecycle-pipeline-automation/)** | Semanas 5–6 | Lifecycle, pipeline, SLA, ownership, workflows, handoffs e onboarding | ⚪ Planejado |
-| **[03 — Revenue Reporting & Operations Analytics](./03-revenue-reporting-operations-analytics/)** | Semana 7 | KPIs, SQL de funil, dashboards, qualidade, integração e análise executiva | ⚪ Planejado |
+## O que o projeto trouxe
 
-A Semana 8 consolida QA, documentação, demonstração, portfólio e preparação para candidaturas. Ela não cria um quarto projeto.
+- Um caminho documentado entre diagnóstico, preparação de dados, operação comercial e acompanhamento do funil.
+- Uma separação clara entre registros preparados, exceções e o piloto realmente executado.
+- Regras comerciais testadas com os limites encontrados descritos junto dos resultados.
+- Painéis alinhados a uma população definida, evitando comparar contagens de escopos diferentes.
+- Uma leitura cuidadosa dos dados: campo sem preenchimento não prova ausência de atividade, e valor de negócio não comprova pagamento nem receita reconhecida.
 
-## Empresa e dados simulados
+## O que este case demonstra
 
-O laboratório representa uma empresa brasileira B2B SaaS com Marketing, SDRs, executivos de vendas, Customer Success e suporte; aquisição inbound e outbound; assinatura, onboarding, expansão, renovação e churn.
+Organização e qualidade de dados · desenho de processos comerciais · configuração e teste de regras no CRM · acompanhamento do funil · validação de resultados · comunicação clara de escopo e limitações.
 
-Base sintética prevista:
+## Conheça cada etapa
 
-- 500 contatos;
-- 150 empresas;
-- 220 negócios;
-- 180 tickets;
-- 12 meses de histórico;
-- 6 usuários internos.
+Os READMEs dos [Projetos 1](./01-crm-architecture-data-migration/), [2](./02-lifecycle-pipeline-automation/) e [3](./03-revenue-reporting-operations-analytics/) apresentam as decisões e evidências de cada parte do trabalho.
 
-## Progressão técnica
-
-### SQL
-
-- Semana 3: consultas básicas;
-- Semana 4: qualidade, duplicidades e reconciliação;
-- Semana 5: pipeline, responsáveis e atividades;
-- Semana 7: funil, conversão e aging.
-
-### Reporting
-
-- Semana 2: perguntas de negócio;
-- Semana 3: propriedades reportáveis;
-- Semana 4: qualidade dos dados;
-- Semana 5: métricas do pipeline;
-- Semana 6: monitoramento de workflows e SLAs;
-- Semana 7: dashboards consolidados.
-
-### Integração
-
-Será implementada somente uma integração, com caso de uso, origem e destino, mapeamento, regra de criação ou atualização, testes de sucesso e falha, log de exceções e reconciliação.
-
-## Tecnologias previstas
-
-| Tecnologia | Uso |
-|---|---|
-| **HubSpot CRM** | Objetos, propriedades, associações, importação, pipeline, workflows e reporting |
-| **Excel / Power Query** | Auditoria, limpeza, transformação, mapping e reconciliação |
-| **SQL** | Qualidade, pipeline, funil, conversão e aging |
-| **Integração externa** | Sincronização controlada e tratamento de exceções |
-| **GitHub** | Versionamento, documentação técnica e evidências |
-
-As tecnologias somente serão tratadas como competências demonstráveis quando houver implementação, testes e evidências publicados.
-
-## Estrutura
-
-```text
-Creative-Print-RevOps-Lab/
-├── 01-crm-architecture-data-migration/
-├── 02-lifecycle-pipeline-automation/
-├── 03-revenue-reporting-operations-analytics/
-└── README.md
-```
-
-Não haverá pastas diárias nem arquivos vazios para simular progresso.
+> **Sobre os dados:** a NexaFlow e os registros usados são fictícios e sintéticos. Os números demonstram o trabalho realizado neste case; não representam resultados de uma empresa real. O campo de valor dos negócios não foi tratado como prova de receita.
 
 ---
 
 <div align="center">
 
-**Karla Teshima**  
-Founder & CEO, Creative Print  
-[LinkedIn profissional](https://www.linkedin.com/in/karla-teshima-revops)
+**Karla Teshima** · [LinkedIn](https://www.linkedin.com/in/karla-teshima-revops)
 
 </div>

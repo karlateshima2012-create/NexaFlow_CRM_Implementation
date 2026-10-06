@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="480" viewBox="0 0 1500 480" role="img" aria-labelledby="title desc">
+<title id="title">NexaFlow | CRM do dado à decisão</title>
+<desc id="desc">Três etapas: entender e preparar os dados, organizar a operação comercial, acompanhar o funil com painéis coerentes.</desc>
+<rect width="1500" height="480" rx="30" fill="#0e1930"/>
+<text x="70" y="90" fill="#1fbeaf" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="3">PROJETO DE CRM • EMPRESA B2B SAAS FICTÍCIA</text>
+<text x="70" y="150" fill="#ffffff" font-family="Arial,sans-serif" font-size="42" font-weight="700">NexaFlow | CRM do dado à decisão</text>
+<g font-family="Arial,sans-serif">
+<rect x="70" y="215" width="395" height="180" rx="18" fill="#172745" stroke="#1fbeaf" stroke-width="3"/>
+<text x="100" y="260" fill="#1fbeaf" font-size="17" font-weight="700">ETAPA 01</text><text x="100" y="305" fill="#ffffff" font-size="25" font-weight="700">Organizar os dados</text><text x="100" y="348" fill="#baccdf" font-size="17">14 fontes • preparação e piloto</text>
+<path d="M480 305h45" stroke="#1fbeaf" stroke-width="4"/><path d="m515 295 12 10-12 10" fill="none" stroke="#1fbeaf" stroke-width="4"/>
+<rect x="550" y="215" width="395" height="180" rx="18" fill="#172745" stroke="#57b8e3" stroke-width="3"/>
+<text x="580" y="260" fill="#57b8e3" font-size="17" font-weight="700">ETAPA 02</text><text x="580" y="305" fill="#ffffff" font-size="25" font-weight="700">Estruturar a operação</text><text x="580" y="348" fill="#baccdf" font-size="17">Regras claras para equipes e negócios</text>
+<path d="M960 305h45" stroke="#1fbeaf" stroke-width="4"/><path d="m995 295 12 10-12 10" fill="none" stroke="#1fbeaf" stroke-width="4"/>
+<rect x="1030" y="215" width="395" height="180" rx="18" fill="#172745" stroke="#b3dc6f" stroke-width="3"/>
+<text x="1060" y="260" fill="#b3dc6f" font-size="17" font-weight="700">ETAPA 03</text><text x="1060" y="305" fill="#ffffff" font-size="25" font-weight="700">Acompanhar o funil</text><text x="1060" y="348" fill="#baccdf" font-size="17">5 negócios • painéis coerentes</text>
+</g></svg>

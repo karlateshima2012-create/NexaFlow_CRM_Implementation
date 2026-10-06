@@ -1,0 +1,10 @@
+Projeto 3 — QA final — 06/10/2026
+
+População de referência: 5 Deals SIM- nos CSVs da pasta raw e na tabela SQLite deals_raw. Os cinco Record IDs coincidem.
+Distribuição reconciliada entre QRY-002 e os relatórios HubSpot: Appointment Scheduled 1; Qualified To Buy 1; Closed Won 1; Closed Lost 2. Total: 5.
+QRY-003: 2 Deals abertos sem Next Activity Date informado; 0 sem owner. Campo de data vazio não comprova ausência de tarefa.
+QRY-004: 2 Closed Lost; 1 motivo bruto vazio e 1 preenchido.
+Integração: lote manual CSV → SQLite; idempotência, atualização de teste controlada, rejeição de chave ausente e reconciliação 5/5 registradas. Sem API, sincronização ou escrita no HubSpot.
+Limites: fixtures sintéticas; Amount de Deal não comprova pagamento nem receita reconhecida. QRY-005/006 não executadas por falta de dados de Interactions e histórico de handoff com timestamps.
+
+Evidência visual final: a captura antiga do painel operacional, que incluía registros fora da coorte, foi excluída. A captura atual do dashboard HubSpot após aplicar os filtros da coorte está em 05_Operational_Dashboard; a evidência executiva está em 06_Executive_Dashboard.
