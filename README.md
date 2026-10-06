@@ -20,7 +20,7 @@ A NexaFlow representa uma empresa brasileira B2B SaaS com dados dispersos, crit�
 - **Projeto 2:** matriz de rastreabilidade, testes operacionais e workflows testados no portal de treinamento; pagamento simulado e handoff de onboarding manual.
 - **Projeto 3:** 5 Deals no CSV, SQLite, SQL, resultados e dashboards; distribuição de estágios: Appointment Scheduled 1, Qualified To Buy 1, Closed Won 1, Closed Lost 2.
 
-Os detalhes e evidências estão nos READMEs de cada projeto. Para o Projeto 3, veja também a [consulta SQL](./03-revenue-reporting-operations-analytics/sql/03_NexaFlow_Funnel_SQL_v1.0.sql), o [relatório final](./03-revenue-reporting-operations-analytics/evidence/08_NexaFlow_Revenue_Reporting_Analytics_Report_v1.0.docx) e as [capturas dos dashboards](./03-revenue-reporting-operations-analytics/evidence/).
+Os detalhes e evidências estão nos READMEs de cada projeto. Para o Projeto 3, veja também a [consulta SQL](./03-revenue-reporting-operations-analytics/sql/03_NexaFlow_Funnel_SQL_v1.0.sql), o [relatório final](./03-revenue-reporting-operations-analytics/evidence/08_NexaFlow_Revenue_Reporting_Analytics_Report_v1.0.docx) e a [captura real do dashboard executivo](./03-revenue-reporting-operations-analytics/evidence/06_NexaFlow_Executive_Dashboard_Evidence_v1.0.jpg).
 
 ## Limites de interpretação
 
