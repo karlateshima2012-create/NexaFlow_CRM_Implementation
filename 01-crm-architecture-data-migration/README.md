@@ -39,7 +39,26 @@ Antes de qualquer importação, era necessário definir identidade dos registros
 
 ---
 
+## Critérios de elegibilidade
+
+O mapeamento documenta verificações por objeto e fonte; não há uma única regra genérica para todos os registros.
+
+| Controle | Regra documentada |
+|---|---|
+| Identidade e duplicidade | Preservar IDs legados confiáveis e reconciliar contatos por e-mail/telefone normalizados, sem recriar registros de lotes antigos. |
+| Formatos e valores | Validar e-mails e datas; padronizar telefones e mapear valores para listas controladas. |
+| Campos condicionais | Exigir data de fechamento para oportunidades fechadas e motivo de perda para oportunidades perdidas, conforme o mapeamento. |
+| Associações | Vincular oportunidades à empresa e a pelo menos um contato; vincular interações a pelo menos um registro de negócio. |
+
+Essas são regras de preparação documentadas nas abas **02_Field_Mapping** e **05_Identity_Associatio** da planilha de mapeamento. O consolidado registra **177 elegíveis e 164 exceções/pendências**; esses totais não representam aprovação integral de todos os campos e associações no HubSpot. O piloto tem limites próprios descritos no relatório.
+
+---
+
 ## Evidências
+
+![Mapeamento de campos da origem para o CRM](./evidence/NexaFlow_Migration_Mapping_Visual.svg)
+
+Recorte documental da aba **02_Field_Mapping**, linhas 2–7: mostra transformações e propriedades de destino. Não é uma captura do HubSpot nem prova de carga integral.
 
 - [Relatório final do piloto e reconciliação](./evidence/15_NexaFlow_Data_Migration_Report_v1.0.docx)
 - [Modelo de dados e governança](./evidence/08_Data_Model_and_Governance_NexaFlow.xlsx)
@@ -54,5 +73,7 @@ Antes de qualquer importação, era necessário definir identidade dos registros
 - Validar associações e valores no destino, não apenas a carga dos registros
 
 ---
+
+**Ferramentas utilizadas:** HubSpot · Power Query · SQL · Excel.
 
 [← Voltar para a apresentação do case](../README.md) · [Próxima etapa: Operação e Automações →](../02-lifecycle-pipeline-automation/)
